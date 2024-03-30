@@ -1,0 +1,267 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+% \input{glyphtounicode.tex}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\color{BrickRed}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{BrickRed}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+% \pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% \newcommand{\resumeSubSubheading}[2]{
+%     \item
+%     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+%       \textit{\small#1} & \textit{\small #2} \\
+%     \end{tabular*}\vspace{-7pt}
+% }
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\begin{center}
+  {\Huge \scshape Chan Yat Fu Jacky} \\ \vspace{5pt}
+  \small \raisebox{-0.1\height}\faPhone\ +852 64676899~ \href{mailto:chanyatfu0616@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{chanyatfu0616@gmail.com}} ~
+  \href{https://www.linkedin.com/in/yat-fu-chan/}{\raisebox{-0.2\height}\faLinkedin\ \underline{LinkedIn}}  ~
+  \href{https://github.com/chanyatfu}{\raisebox{-0.2\height}\faGithub\ \underline{Github}}
+  \vspace{-8pt}
+\end{center}
+
+\vspace{-10pt}
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+
+% HKU
+\resumeSubheading
+{The University of Hong Kong}{Sept 2019 -- Now}{BEng in Computer Engineering}{CGPA 2.51}
+\resumeItemListStart
+\resumeItem{2022-2023 Year GPA: 3.85}
+\resumeItem{2023-2024 Semester 1 GPA: 3.57}
+\resumeItemListEnd
+
+% DSE
+\resumeSubheading{Buddhist Sin Tak College}{}
+{Hong Kong Diploma of Secondary Education Examination}{}
+\resumeItemListStart
+\resumeItem{DSE: 5* in English Speaking, 5 in English Writing}
+\resumeItem{IELTS (2019): 8.5 in Reading, 7.5 in Listening}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-14pt}
+
+% -----------EXPERIENCE-----------
+\section{Work Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Software Developer -- Novbee}{June 2023 -- January 2024}
+{Part-time Software Developer}{August 2023 -- January 2024}
+\resumeItemListStart
+\resumeItem{Developed and maintained a dynamic website leveraging \textbf{Next.js}, \textbf{FastAPI}, \textbf{PostgreSQL}, and \textbf{GraphQL}.}
+\resumeItem{Conceived and executed the backend infrastructure and database schema for the company.}
+\resumeItemListEnd
+\vspace{-4pt}
+\resumeSubSubheading{Software Developer Intern}{June 2023 -- August 2023}
+\resumeItemListStart
+\resumeItem{Engineered a Singing Voice Synthesis model utilizing \textbf{PyTorch}.}
+\resumeItem{Developed a user-friendly \textbf{React} website enhancing the company's digital presence.}
+\resumeItemListEnd
+
+\resumeSubheading
+{DIgital Marketing and Data Analytics Intern -- Homie Living}{May 2022 -- August 2022}{}{}\vspace{-18pt}
+\resumeItemListStart
+\resumeItem{Enhanced the open and click rates of email campaigns by 22\% and 17\% respectively.}
+\resumeItem{Optimized SEO strategy leading to \textbf{top 3 Google search rankings} for various keywords (4 ranked first, 4 ranked second, 2 ranked third).}
+\resumeItem{Devised a marketing campaign reaching thousands of audience members, resulting in daily sales figures exceeding \$100K.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-15pt}
+
+
+%-----------PROJECTS-----------
+\section{Individual Projects}
+\vspace{-5pt}
+\resumeSubHeadingListStart
+\resumeProjectHeading{\textbf{React MIDI Editor: A versatile and customizable MIDI editor library.}}{\href{https://github.com/chanyatfu/react-piano-roll}{\underline{Source Code}}}
+\resumeItemListStart
+\resumeItem{Implemented a practical \textbf{singing voice synthesizer} using this library as an illustration.}
+\resumeItem{Incorporated vital features such as \textbf{clipboard, undo/redo, and import/export}, along with lyric support for augmented functionality.}
+\resumeItem{Designed to be responsive and \textbf{mobile-friendly}, optimized to support rapid update of 1000+ notes at 60fps.}
+\resumeItem{Facilitates customization of styles and behaviors, aligning with user preferences.}
+\resumeItemListEnd
+\vspace{-15pt}
+
+\resumeProjectHeading{\textbf{Stay Hydrated: An interactive console-based application for tracking daily water consumption.}}{\href{https://github.com/chanyatfu/stay-hydrated}{\underline{Source Code}}}
+\resumeItemListStart
+\resumeItem{\textbf{GUI}{: Crafted using React and Ink} \hspace{5pt} \textbf{Database}{: Utilized LokiJS for database management}}
+\resumeItem{Configured to \textbf{run in the background}, estimates user's water intake and issues timely \textbf{notification reminders}.}
+\resumeItem{Embodied a \textbf{modern GUI} influenced by page routing, providing an improved UX while ensuring that the commands remain \textbf{easily accessible}.}
+\resumeItemListEnd
+\vspace{-15pt}
+
+\resumeProjectHeading{\textbf{ICMS: A comprehensive course management dashboard.}}{\href{https://github.com/chanyatfu/ICMS}{\underline{Source Code}}}
+\resumeItemListStart
+\resumeItem{Integrated a \textbf{facial recognition login component} for enhanced security.}
+\resumeItem{Delivers real-time course schedule and information depending on user's context and timing.}
+\resumeItem{Augmented interaction by enabling users to forward course-related information to their personal email accounts.}
+\resumeItemListEnd
+\vspace{-15pt}
+
+\resumeProjectHeading{\textbf{MuseDecode: An FPGA-based musical signal decoder.}}{}
+\resumeItemListStart
+\resumeItem{Conceived and implemented an audio signal to text decoder using Vivado and FPGA.}
+\resumeItem{Supports decoding of complex waveforms with a \textbf{high tolerance for noise} (SNR 12dB).}
+\resumeItem{Allows for \textbf{precise detection across a vast frequency spectrum} ranging from 400 - 5000 Hz.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-13pt}
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+\begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}l@{\extracolsep {\fill}}l}
+  \textbf{Language} TypeScript, Python, Bash Script &
+  \textbf{Frontend} GSAP, Next.js, React, CSS, TailwindCSS & \\
+  \textbf{Backend} Node.js, Express.js, FastAPI &
+  \textbf{Cloud \& Databases} AWS, Azure, SQL, MongoDB & \\
+  \textbf{Other Technologies} GraphQL, WebSocket, PyTorch, Docker
+\end{tabular*}
+\vspace{-13pt}
+
+% \section{Competitions, Honours and Awards}
+
+% \resumeSubHeadingListStart
+% \resumeSubheading{Finalist - Generative AI Hackathon for Social Good}{October 2023}
+% {Finalist}{The University of Hong Kong}
+% \resumeItemListStart
+% \resumeItem{Got selected being in top \textbf{1.4\% out of 40,000} students who applied, got mentorship under the seniors engineers of Apple, Google, Grab Singapore and Alphagrep Singapore.}
+% \resumeItem{Learned how to build Scalable systems, deployments and gained industry-level work experience.}
+% \resumeItemListEnd
+% \resumeSubHeadingListEnd
+% \vspace{-5 mm}
+% \resumeSubHeadingListStart
+% \resumeSubheading{Graphs camp by Codeforces Master}{Dec 2023}{}{}
+% \resumeItemListStart
+% \vspace{-4mm}
+% \resumeItem{I have been selected out of \textbf{80,000 students from India} as a mentee for graphs camp by Codeforces Master and learned \underline{17+ advanced problem solving techniques} in graphs. Solved 3 super hard problems on the topic shortest paths and got featured in the \textbf{Hall of Fame.} }
+% \resumeItemListEnd
+
+% \resumeSubHeadingListEnd
+
+
+
+\section{Competitions/Achievements}
+\resumeItemListStart
+\resumeItem{\textbf{Finalist} -- Generative AI Hackathon for Social Good, The University of Hong Kong.}\vspace{-6pt}
+\resumeItem{\textbf{Chairperson} -- Wei Lun Hall Student's Association, The University of Hong Kong.}\vspace{-6pt}
+
+% \resumeItem{Solved \textbf{250+ super hard} DSA problems from \textbf{Rapid Growth Problemset}, building problem solving skills.}
+% \resumeItem{Rated \textbf{Candidate Master} on Codeforces with \underline{Rating 1960 (Top 300 in India)}.}
+% \resumeItem{Secured \textbf{Rank 1/400+} participants in the flagship Coderush 2024 Coding Challenge.}
+% \resumeItem{Ranked in \textbf{top 1 percentile} in 30+ Coding Test Simulations during  \href{https://bit.ly/accelerator-2023}{\underline{InterviewPrep in Accelerator Camp}}.}
+% \resumeItem{\textbf{Won 3+ coding contests} in the \href{https://bit.ly/accelerator-2023}{\underline{Accelerator Camp}} beating top students of IITs/NITs and IIITs.}
+
+\resumeItemListEnd
+
+\end{document}
