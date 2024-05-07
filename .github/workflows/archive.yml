@@ -1,0 +1,10 @@
+name: store-archive
+run-name: Storing archive
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Archive file
+        run: mkdir -p archives && cp -r Chan_Yat_Fu_Jacky.pdf archives/Chan_Yat_Fu_Jacky_$(date +"%Y_%m_%d").pdf
