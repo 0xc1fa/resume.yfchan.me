@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper,10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -15,9 +15,11 @@
 \usepackage{multicol}
 \usepackage{amsmath}
 \usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{-1pt}
 \setlength{\footskip}{4.08003pt}
+\usepackage{ulem}
 
 %----------FONT OPTIONS----------
 % sans-serif
@@ -44,7 +46,7 @@
 \addtolength{\oddsidemargin}{-0.6in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-.85in}
+\addtolength{\topmargin}{-.75in}
 \addtolength{\textheight}{1.4in}
 
 \urlstyle{same}
@@ -55,31 +57,18 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\color{BrickRed}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{BrickRed}\titlerule \vspace{-5pt}]
+  \vspace{-12pt}\color{BrickRed}\scshape\raggedright\bfseries
+}{}{0em}{}[\color{BrickRed}\titlerule\large\vspace{-5pt}]
 
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
 \newcommand{\classesList}[4]{
   \item\small{
     {#1 #2 #3 #4 \vspace{-2pt}}
   }
 }
 
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-  \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & \textbf{\small #2} \\
-    \textit{\small#3} & \textit{\small #4} \\
-  \end{tabular*}\vspace{-7pt}
-}
 
 % \newcommand{\resumeSubSubheading}[2]{
 %     \item
@@ -88,235 +77,160 @@
 %     \end{tabular*}\vspace{-7pt}
 % }
 
-\newcommand{\resumeSubSubheading}[2]{
-  \item
-  \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textit{\small#1} & \textit{\small #2} \\
-  \end{tabular*}\vspace{-7pt}
-}
-
-
-\newcommand{\resumeProjectHeading}[2]{
-  \item
-  \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
-    \textbf{\small#1} & \textbf{\small #2}\\
-  \end{tabular*}\vspace{-7pt}
-}
-
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
-    \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-    \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \begin{document}
 \begin{center}
   {\Huge \scshape Chan Yat Fu Jacky} \\ \vspace{5pt}
   \small \raisebox{-0.1\height}\faPhone\ +852 64676899~ \href{mailto:chanyatfu0616@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{chanyatfu0616@gmail.com}} ~
-  % \href{https://www.linkedin.com/in/yat-fu-chan/}{\raisebox{-0.2\height}\faLinkedin\ \underline{LinkedIn}}  ~
+  \href{https://www.linkedin.com/in/yat-fu-chan-255b59306/}{\raisebox{-0.2\height}\faLinkedin\ \underline{LinkedIn}}  ~
   \href{https://github.com/chanyatfu}{\raisebox{-0.2\height}\faGithub\ \underline{chanyatfu}}
-  \vspace{-8pt}
+  \vspace{-3pt}
 \end{center}
 
-\vspace{-16pt}
+\newcommand*{\bb}[2][]{{\small\bfseries#2\hfill{\small#1}}\\}
+\newcommand*{\cc}[2][]{{\bfseries\textit{\small#2}\hfill\textit{\small#1}}\\}
+\newenvironment{tightitemize}{\begin{itemize}[leftmargin=2em,topsep=1pt,partopsep=1pt,noitemsep]\small}{\end{itemize}\vspace*{2pt}}
+
 %-----------EDUCATION-----------
 \section{Education}
-\resumeSubHeadingListStart
 
-% HKU
-\resumeSubheading
-{The University of Hong Kong}{Sept 2019 -- Now}{BEng in Computer Engineering}{Advanced Courses GPA 3.46}
-\resumeItemListStart
-\resumeItem{2022-2023 Year GPA: 3.85 (12 courses)}
-\resumeItem{\textbf{Winner (Top 11 out of 136 projects)} -- Final Year Project Competition}
-\resumeItem{\textbf{Finalist (Top 6)} -- Generative AI Hackathon for Social Good}
-\resumeItem{A+ in Operating Systems, Digital System Design, Probabilistic Systems Analysis}
-\resumeItem{A/A- in \textbf{OOP and Java}, Computer and communication networks, Introduction to database management systems, Machine learning, Artificial intelligence, Algorithm design, Integrated design project}
-\resumeItemListEnd
+\bb[Sept 2019 -- Now]{The University of Hong Kong}
+\cc[Advanced Courses GPA 3.46]{BEng in Computer Engineering}
+\begin{tightitemize}
+  \item 2022-2023 Year GPA: 3.85
+  \item A+ in Operating Systems, Digital System Design, Probabilistic Systems Analysis
+  \item A range in OOP and Java, Computer networks, Intro to DBMS, ML, AI, Algorithm design, Integrated design project
+\end{tightitemize}
 
-\vspace*{-4pt}
+\bb{Buddhist Sin Tak College}
+\begin{tightitemize}
+  \item \textbf{IELTS (2019)}: \textbf{8.5 in Reading}, 7.5 in Listening
+  \item \textbf{DSE English}: \textbf{5* in Speaking}, 5 in Writing
+\end{tightitemize}
 
-\resumeSubheading{Language Qualifications}{}{}{}\vspace*{-18pt}
-\resumeItemListStart
-\resumeItem{\textbf{DSE English}: \textbf{5* in Speaking}, 5 in Writing $|$ \textbf{IELTS} (2019): \textbf{8.5 in Reading}, 7.5 in Listening}
-% \resumeItem{Proficient in English, Mandarin, and Cantonese}
-\resumeItemListEnd
 
-% DSE
-% \resumeSubheading{Buddhist Sin Tak College}{}
-% {Hong Kong Diploma of Secondary Education Examination}{}
-% \resumeItemListStart
-% \resumeItem{\textbf{DSE}: 5* in English Speaking, 5 in English Writing; \textbf{IELTS} (2019): 8.5 in Reading, 7.5 in Listening}
-% \resumeItemListEnd
-\resumeSubHeadingListEnd
-\vspace{-16pt}
+\newcommand{\certificate}[3]{\textbf{#1} -- #2 [#3]}
+
+% -----------CERTIFICATIONS-----------
+\section{Professional Certifications}
+
+\begin{tabular*}{\linewidth}{>{\small}l @{\extracolsep{\fill}} >{\bfseries \small}r}
+  % \certificate{Project Management Professional (PMP)}{Project Management Institute}{Jan 2017}  & \href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}\\
+  % [1pt]
+  \sout{\certificate{AWS Certified Solutions Architect - Associate (SAA-C03)}{Amazon Web Services}{Jun 2024}} & \href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}\\
+  [1pt]
+  % \certificate{AWS Certified Solutions Architect - Professional (SAP-C02)}{Amazon Web Services}{Jun 2024} & \href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}\\
+  % [1pt]
+  % \certificate{AWS Certified DevOps Engineer - Professional (DOP-C02)}{Amazon Web Services}{Jun 2024} & \href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}\\
+  % [1pt]
+  \sout{\certificate{AWS Certified Developer - Associate (DVA-C02)}{Amazon Web Services}{Jun 2024}} & \href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}\\
+  [1pt]
+  \sout{\certificate{HashiCorp Certified: Terraform Associate (HCTA0-003)}{HashiCorp}{Jun 2024}} & \href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}\\
+  % [1pt]
+  % \certificate{Certified Kubernetes Administrator (CKA)}{Kubernetes}{Jun 2024} & \href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}\\
+  % [1pt]
+  % \certificate{Certified Kubernetes Application Developer (CKAD)}{Kubernetes}{Jun 2024} & \href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}\\
+  % [1pt]
+  % \certificate{Certified Kubernetes Security Specialist (CKS)}{Kubernetes}{Jun 2024} & \href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}\\
+  % [1pt]
+  % \certificate{Certified ScrumMaster (CSM)}{Scrum Alliance}{Jan 2017}  & \href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}\\
+  % [1pt]
+  % \certificate{TOGAF Enterprise Architecture Practitioner}{The Open Group}{Jan 2017}  & \href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}\\
+  % [1pt]
+  % \certificate{Cisco Certified Network Associate (CCNA)}{Cisco}{Jan 2017}  & \href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}\\
+  % [1pt]
+  % \certificate{CompTIA Security+}{CompTIA}{Jan 2017}  & \href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}\\
+\end{tabular*}
+
+%-----------COMPETITION HONORS AWARDS-----------
+\section{Competitions, Honors and Awards}
+\bb{Winner -- HKU Final Year Project Competition [Apr 2024]}
+\begin{tightitemize}
+  \item Distinguished as one of the \textbf{11 winners} among 136 HKU CE/EEE final year projects.
+\end{tightitemize}
+
+\bb[\href{https://commoncore.hku.hk/genai-hackathon-for-social-good-competition/}{\underline{Link}}]{Finalist -- HKU Generative AI Hackathon for Social Good [Oct 2023]}
+\begin{tightitemize}
+  \item \textbf{Led a team of 5 developers} to secure \textbf{2nd runner-up} in the Productive Collaborative Work Award.
+  \item Excelled to a \textbf{top 6} ranking out of 24 teams by developing an application targeting ADHD patients using \textbf{Java} and \textbf{React}.
+\end{tightitemize}
+
 
 % -----------EXPERIENCE-----------
 \section{Work Experience}
-\resumeSubHeadingListStart
+\bb[June 2023 -- January 2024]{Full Stack Developer -- NovBee Limited}
+\cc[August 2023 -- January 2024]{\textbf{Full Stack Developer -- Part-time}}
+\begin{tightitemize}
+  \item Developing the company website and related API service using \textbf{React/Next.js}, and \textbf{FastAPI/Python}.
+  \item Implemented the backend infrastructure and database schema for the company in \textbf{Azure}.
+  \item Implemented the backend infrastructure and database schema for the company in \textbf{Azure}.
+  \item Implemented the backend infrastructure and database schema for the company in \textbf{Azure}.
+  \item Leveraged knowledge in \textbf{FastAPI/Python}, \textbf{React/TypeScript}, \textbf{PostgreSQL}, \textbf{GraphQL}, \textbf{Azure}.
+\end{tightitemize}
 
-\resumeSubheading
-{Software Developer -- Novbee}{June 2023 -- January 2024}
-{\textbf{Part-time Software Developer}}{August 2023 -- January 2024}
-\resumeItemListStart
-\resumeItem{Enhanced the company's digital presence by developing the company website using \textbf{React/Next.js}, and \textbf{FastAPI}.}
-\resumeItem{Conceived and executed the backend infrastructure and database schema for the company.}
-\resumeItem{Leveraged knowledge in \textbf{React}, \textbf{TypeScript}, \textbf{Next.js}, \textbf{FastAPI}, \textbf{PostgreSQL}, \textbf{GraphQL}, \textbf{AWS}, and \textbf{Azure}.}
-\resumeItemListEnd
-\vspace{-4pt}
-\resumeSubSubheading{\textbf{Software Developer Intern}}{June 2023 -- August 2023}
-\resumeItemListStart
-\resumeItem{Boosted data processing efficiency by developing an automated processing pipeline with \textbf{Python} and \textbf{Selenium}.}
-\resumeItem{Engineered a Singing Voice Synthesis model utilizing \textbf{PyTorch} in \textbf{Linux} environment.}
-\resumeItem{Leveraged knowledge in \textbf{Python}, \textbf{PyTorch}, \textbf{Pandas}, \textbf{NumPy}, \textbf{Bash Script}, \textbf{Docker}, and \textbf{Selenium}.}
-\resumeItemListEnd
+\cc[June 2023 -- August 2023]{\textbf{Software Developer -- Intern}}
+\begin{tightitemize}
+  \item Developing the company website and related API service using \textbf{React/Next.js}, and \textbf{FastAPI/Python}.
+  \item Developing the company website and related API service using \textbf{React/Next.js}, and \textbf{FastAPI/Python}.
+  \item Developing the company website and related API service using \textbf{React/Next.js}, and \textbf{FastAPI/Python}.
+  \item Leveraged knowledge in \textbf{FastAPI/Python}, \textbf{React/TypeScript}, \textbf{PostgreSQL}, \textbf{GraphQL}, \textbf{Azure}.
+\end{tightitemize}
 
-\resumeSubheading
-{Digital Marketing and Data Analytics Intern -- Homie Living}{May 2022 -- August 2022}{}{}\vspace{-18pt}
-\resumeItemListStart
-\resumeItem{Increased the open and click rates of email campaigns by \textbf{22\% and 17\%} respectively by improving the content.}
-\resumeItem{Enhanced the Google search ranking of \textbf{10 keywords} to the \textbf{top 3 positions} by refining SEO strategies.}
-\resumeItemListEnd
-
-\resumeSubHeadingListEnd
-\vspace{-16pt}
-
-
-%-----------CERTIFICATIONS-----------
-% \section{Certifications}
-% \vspace{-5pt}
-% \resumeSubHeadingListStart
-% \resumeProjectHeading{AWS Certified Solutions Architect - Associate}{\href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}}
-% \vspace*{-28pt}
-% \resumeProjectHeading{AWS Certified Developer - Associate
-% }{\href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}}
-% \resumeSubHeadingListEnd
+\bb[May 2022 -- August 2022]{Digital Marketing and Data Analytics Intern -- Homie Living}
+\begin{tightitemize}
+  \item Created automations in Python for data visualization and analysis.
+  \item Enhanced the Google search ranking of \textbf{10 keywords} to the \textbf{top 3 positions} by refining \textbf{SEO} strategies.
+  \item Increased the open and engagement rates of email by \textbf{22\% and 17\%} respectively by improving the content.
+  \item Leveraged knowledge in \textbf{Python} and \textbf{SEO}.
+\end{tightitemize}
 
 
 %-----------PROJECTS-----------
 \section{Projects}
-\vspace{-5pt}
-\resumeSubHeadingListStart
-\resumeProjectHeading{\textbf{MIDI Editor (React): A versatile and customizable music workstation}}{\href{https://github.com/chanyatfu/react-midi-editor}{\underline{GitHub Repo}}}
-\resumeItemListStart
-\resumeItem{Developed a \textbf{React} library for creating and editing MIDI files with a highly interactive interface.}
-\resumeItem{Showcased the library's capabilities by implementing a singing voice synthesizer in \textbf{Next.js} using this library.}
-\resumeItem{Incorporated essential features such as \textbf{clipboard, undo/redo, import/export, and lyric input}.}
-% \resumeItem{}
-\resumeItem{Demo: \href{https://react-midi-editor-demo.vercel.app}{\underline{https://react-midi-editor-demo.vercel.app}} $|$ Utilised: TypeScript, React, Next.js, Jest/RTL, SCSS.}
-\resumeItemListEnd
-\vspace{-16pt}
 
-\resumeProjectHeading{\textbf{Tic-tac-toe (Java): A multi-player game utilizing socket and multi-threading}}{\href{https://github.com/chanyatfu/tic-tac-toe}{\underline{GitHub Repo}}}
-\resumeItemListStart
-\resumeItem{Integrated \textbf{socket programming}, \textbf{multi-threading} to manage game state and user interactions.}
-\resumeItem{Implemented a dynamic \textbf{Java Swing} GUI for real-time game status updates and player interactions.}
-\resumeItem{Improved game stability by handling \textbf{network disruptions} and \textbf{player disconnections} effectively.}
-\resumeItemListEnd
-\vspace{-16pt}
+\bb[\href{http://youtu.be/uQ2K_xgbq7g}{\underline{Demo Video}}]{\textbf{Wavy: Web-based Music Workstation} (Individual)}
+\begin{tightitemize}
+  \item Enhanced UX with a \textbf{resizable, scrollable} canvas featuring copy/paste, undo/redo, and import/export.
+  \item Enabled modularization by decoupling event handling logic to allow seamless addition of new features.
+  \item Enhanced UX with a \textbf{resizable, scrollable} canvas featuring copy/paste, undo/redo, and import/export.
+  \item Demo video: \href{http://youtu.be/uQ2K\_xgbq7g}{\underline{http://youtu.be/uQ2K\_xgbq7g}} $|$ Utilised: React/TypeScript, FastAPI/Python, Jest/RTL, SCSS.
+\end{tightitemize}
 
-\resumeProjectHeading{\textbf{Hooks (React): A fully tested React hooks and TypeScript utilities library}}{\href{https://github.com/chanyatfu/hooks}{\underline{GitHub Repo}}}
-\resumeItemListStart
-\resumeItem{Designed a comprehensive collection of modular \textbf{React} hooks and \textbf{TypeScript} utilities.}
-\resumeItem{Achieved 99\% test coverage using \textbf{Jest} and \textbf{React Testing Library}.}
-\resumeItem{Integrated \textbf{GitHub Actions} for continuous integration and deployment.}
-\resumeItem{Utilised: TypeScript, React, Jest/RTL, Github Actions, Rollup.}
-\resumeItemListEnd
-\vspace{-16pt}
+\bb[\href{https://www.youtube.com/watch?v=4uMUNsvreuI}{\underline{Demo Video}}]{\textbf{ICMS: Course Management Dashboard} (Group)}
+\begin{tightitemize}
+  \item \textbf{Led backend development} and was fully responsible for the \textbf{frontend} and \textbf{database} of the application.
+  \item \textbf{Led backend development} and was fully responsible for the \textbf{frontend} and \textbf{database} of the application.
+  \item Integrated a \textbf{facial recognition} component for login using \textbf{OpenCV}.
+  \item Utilised: Java/Spring Boot, React/TypeScript, MySQL, OpenCV.
+\end{tightitemize}
 
-\resumeProjectHeading{\textbf{Folded (Java): A interactive GUI card game}}{\href{https://github.com/chanyatfu/folded}{\underline{GitHub Repo}}}
-\resumeItemListStart
-\resumeItem{Developed a \textbf{Java-based} card game using Swing, managing shuffling, betting, and rule enforcement.}
-\resumeItem{Created interactive GUI elements for card replacement and result evaluation.}
-% \resumeItem{Utilised: Java, Swing.}
-\resumeItemListEnd
-\vspace{-16pt}
-
-\resumeProjectHeading{\textbf{ICMS (TypeScript/Python): A comprehensive course management dashboard}}{\href{https://github.com/chanyatfu/ICMS}{\underline{GitHub Repo}}}
-\resumeItemListStart
-\resumeItem{Integrated a \textbf{facial recognition} component for enhanced security during login using \textbf{OpenCV}.}
-% \resumeItem{Provides \textbf{real-time course schedules} and information based on the user's context and timing.}
-% \resumeItem{Enhanced user interaction by enabling the forwarding of course-related information to personal email accounts.}
-\resumeItem{Utilised: TypeScript, Python, FastAPI, Solid.js, TailwindCSS, MySQL, OpenCV.}
-% \vspace{-15pt}
-\resumeItemListEnd
-
-
-% \resumeProjectHeading{\textbf{Stay Hydrated (React): Interactive console-based application for water intake tracking}}{\href{https://github.com/chanyatfu/stay-hydrated}{\underline{GitHub Repo}}}
-% \resumeItemListStart
-% \resumeItem{Developed using \textbf{React} and \textbf{Ink} for a modern user interface, with \textbf{LokiJS} for data management.}
-% % \resumeItem{Engineered to operate \textbf{in the background}, automatically tracking water consumption and delivering notification.}
-% \resumeItem{Utilised: TypeScript, React, Ink, LokiJS, Node.js.}
-% \resumeItemListEnd
-
-
-% \vspace{-15pt}
-
-% \resumeProjectHeading{\textbf{MuseDecode: An FPGA-based musical signal decoder.}}{}
-% \resumeItemListStart
-% \resumeItem{Conceived and implemented an audio signal to text decoder using Vivado and FPGA.}
-% \resumeItem{Supports decoding of complex waveforms with a \textbf{high tolerance for noise} (SNR 12dB).}
-% \resumeItem{Allows for \textbf{precise detection across a vast frequency spectrum} ranging from 400 - 5000 Hz.}
-% \resumeItemListEnd
-
-\resumeSubHeadingListEnd
-\vspace{-16pt}
+\bb[\href{https://github.com/chanyatfu/hooks}{\underline{GitHub Repo}}]{\textbf{Hooks: React Hooks and TypeScript Utilities Library (Individual)}}
+\begin{tightitemize}
+  \item Designed a comprehensive collection of modular \textbf{React} hooks and \textbf{TypeScript} utilities.
+  \item Achieved 99\% test coverage using \textbf{Jest} and \textbf{React Testing Library}.
+  \item Integrated \textbf{GitHub Actions} for automated code testing.
+  \item Utilised: React/TypeScript, Jest/RTL, Github Actions, Rollup.
+\end{tightitemize}
 
 
 %-----------PROGRAMMING SKILLS-----------
-% \section{Technical Skills}
-% \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}l@{\extracolsep {\fill}}l}
-%   \textbf{Language} TypeScript/JavaScript, Python, Java, HTML5, CSS3, PHP &
-%   \textbf{Frontend} Next.js, React, Solid.js & \\
-%   \textbf{Backend} Express.js, FastAPI, Node.js &
-%   \textbf{Cloud \& Databases} AWS, Azure, SQL, MongoDB & \\
-%   \textbf{Other Technologies} PyTorch, Docker, GraphQL
-% \end{tabular*}
-% \vspace{-13pt}
 \section{Technical Skills}
-\begin{tabular*}{1.0\textwidth}{l @{\hspace{6pt}} l @{\hspace{2pt}} l}
-  \textbf{Languages} &  & TypeScript/JavaScript/Node.js, Java, Python, Shell Script \\
-  % && (familiar): Haskell, PHP, C++ \\
-  [2pt]
-  \textbf{Frameworks \& Tools} & & React/Next.js, Spring Boot, Express.js, FastAPI, Jest, React Testing Library, Selenium \\
-  [2pt]
-  \textbf{Cloud and DevOps} & & AWS, Azure, Docker, Git Hooks, GitHub Actions \\
-  [2pt]
-  \textbf{Databases Related} & & Prisma, GraphQL, SQL, MongoDB, Redis \\
+\begin{tabular*}{\linewidth}{>{\bfseries \small}l @{\hspace{10pt}} l<{\small}}
+  Languages & Java, TypeScript/JavaScript/Node.js, Python, PHP, SQL, GraphQL \\
+  [1pt]
+  Frameworks \& Tools & Spring Boot, React/Next.js, Express.js, FastAPI \\
+  [1pt]
+  Cloud \& DevOps & AWS, Azure, Terraform, Docker, GitHub Actions \\
+  [1pt]
+  Databases \& ORM & Redis, MySQL, MongoDB, Hibernate, Prisma \\
 \end{tabular*}
-% \begin{tabular*}{\textwidth}{lrl}
-%   \textbf{Languages} & (proficient): TypeScript, JavaScript, Python, HTML, CSS \\
-%   & (familiar): Java, PHP, C++, Haskell \\
-%   \textbf{Frameworks \& Tools} & \multicolumn{2}{l}{\begin{tabular}[t]{@{}l@{}}
-%       Next.js, React, Solid.js, Node.js, Express.js, \\
-%       FastAPI, PyTorch, TailwindCSS, Selenium,       \\
-%       Jest, React Testing Library, OpenCV
-%     \end{tabular}} \\
-%   \textbf{Cloud \& Databases} & AWS, Azure, SQL, NoSQL, MySQL, PostgresQL, MongoDB \\
-%   \textbf{Other Technologies} & Docker, GraphQL, REST, Linux, Git, GitHub Actions \\
-% \end{tabular*}
-
-\vspace{-16pt}
-
-
-% %-----------PROGRAMMING SKILLS-----------
-% \section{Technical Skills}
-% \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}l@{\extracolsep {\fill}}l}
-%   \textbf{Language} TypeScript, Python, Bash Script &
-%   \textbf{Frontend} GSAP, Next.js, React, CSS, TailwindCSS & \\
-%   \textbf{Backend} Node.js, Express.js, FastAPI &
-%   \textbf{Cloud \& Databases} AWS, Azure, SQL, MongoDB & \\
-%   \textbf{Other Technologies} GraphQL, WebSocket, PyTorch, Docker
-% \end{tabular*}
-% \vspace{-13pt}
 
 % \section{Competitions, Honours and Awards}
 
@@ -350,7 +264,5 @@
 % \resumeItem{Secured \textbf{Rank 1/400+} participants in the flagship Coderush 2024 Coding Challenge.}
 % \resumeItem{Ranked in \textbf{top 1 percentile} in 30+ Coding Test Simulations during  \href{https://bit.ly/accelerator-2023}{\underline{InterviewPrep in Accelerator Camp}}.}
 % \resumeItem{\textbf{Won 3+ coding contests} in the \href{https://bit.ly/accelerator-2023}{\underline{Accelerator Camp}} beating top students of IITs/NITs and IIITs.}
-
 % \resumeItemListEnd
-
 \end{document}
