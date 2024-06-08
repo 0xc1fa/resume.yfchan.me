@@ -1,0 +1,30 @@
+title: Full Stack Engineer
+company: HSBC
+date: 2024-05-18
+website: https://hk.bebee.com/job/38220103d5b5ea60a483e778095bca31?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic
+description: |
+  Located in Hong Kong, the selected candidate will be part of a collaborative global team dedicated to developing HSBC's next-generation electronic synthetic execution capabilities. This role involves focusing on various aspects such as architecture, design, and implementation of order matching, internalization systems, synthetic execution capabilities, and central-risk book management. The candidate will be responsible for providing hands-on technical leadership across the Synthetic agenda within the larger Electronic Trading Technology team.
+
+  As a senior member of the engineering team, the candidate will collaborate closely with the front-office trading and product teams to ensure timely and comprehensive delivery of business requirements.
+responsibilities:
+  - Establishing a high-performance, scalable, and highly available synthetic execution platform in Asia
+  - Making strategic architectural and design decisions
+  - Contributing to the platform's rearchitecture evolution and strategic direction
+  - Working closely with front-office trading and product teams to swiftly deliver new functionality and enhancements
+  - Coordinating with local compliance and risk/control teams to ensure full compliance with regulatory guidelines
+  - Maintaining constant communication with the global team for collaborative development and strategic decision-making
+requirements:
+  - Thorough, applied knowledge of Prime, synthetic execution, internalization, and matching engine construction
+  - Demonstrated success in leading greenfield enterprise software engineering initiatives
+  - Expertise in Java including garbage collection, data structures, and non-blocking IO
+  - In-depth understanding of equities trading, FIX messaging, and Asian markets
+  - Detailed knowledge of designing robust, scalable, and highly available distributed trading platforms
+  - A strong interest in technology, technological solutions, and continuous enhancement
+  - Practical understanding of risk, risk management, and technology's role in a regulated environment
+  - Proficiency in written and spoken English with excellent communication skills
+preferences:
+  - Hands-on experience with electronic trading and low-latency execution platforms
+  - Zero GC architectures and micro-benchmarking
+  - Experience with Aeron middleware and multi-cast networking
+  - Knowledge of the Linux kernel
+  - Understanding of PTP and packet capture-based latency monitoring
