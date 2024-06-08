@@ -90,7 +90,7 @@
   {\Huge \scshape Chan Yat Fu Jacky} \\ \vspace{5pt}
   \small \raisebox{-0.1\height}\faPhone\ +852 64676899~ \href{mailto:chanyatfu0616@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{chanyatfu0616@gmail.com}} ~
   \href{https://github.com/chanyatfu}{\raisebox{-0.2\height}\faGithub\ \underline{chanyatfu}} ~
-  \href{https://www.linkedin.com/in/yat-fu-chan-255b59306/}{\raisebox{-0.2\height}\faLinkedin\ \underline{LinkedIn}}  ~
+  \href{https://hk.linkedin.com/in/yatfuchan}{\raisebox{-0.2\height}\faLinkedin\ \underline{in/yatfuchan}}  ~
   \vspace{-3pt}
 \end{center}
 
@@ -118,41 +118,45 @@
 \end{tightitemize}
 
 
-\newcommand{\certificate}[3]{\textbf{#1} -- #2 [#3]}
-
+\newcommand{\certificateName}[3]{\textbf{#1} -- #2 [#3]}
+\newcommand{\certificateItem}[4]{\certificateName{#1}{#2}{#3} & \href{#4}{\underline{Credential}}\\}
+\newenvironment{spacedtabular*}[1]
+{\setlength{\extrarowheight}{1pt}\begin{tabular*}{#1}{>{\small}l @{\extracolsep{\fill}} >{\bfseries \small}r}}
+    {\end{tabular*}}
 
 % -----------CERTIFICATIONS-----------
-% \section{Professional Certifications}
+\section{Professional Certifications}
+\begin{spacedtabular*}{\linewidth}
+  \certificateItem{AWS Certified Solutions Architect - Associate (SAA-C03)}{Amazon Web Services}{Jun 2024}{https://www.credly.com/badges/0e244f55-8973-4585-a933-a1369373e64e/linked_in_profile}
 
-% \begin{tabular*}{\linewidth}{>{\small}l @{\extracolsep{\fill}} >{\bfseries \small}r}
+  % \certificateItem{AWS Certified Developer - Associate (DVA-C02)}{Amazon Web Services}{Jul 2024}{https://github.com/chanyatfu/react-midi-editor}
 
-%   \sout{\certificate{AWS Certified Solutions Architect - Associate (SAA-C03)}{Amazon Web Services}{Jun 2024}} & \href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}\\
-%   [1pt]
-%   \sout{\certificate{AWS Certified Developer - Associate (DVA-C02)}{Amazon Web Services}{Jun 2024}} & \href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}\\
-%   [1pt]
-%   \sout{\certificate{HashiCorp Certified: Terraform Associate (HCTA0-003)}{HashiCorp}{Jun 2024}} & \href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}\\
-% [1pt]
-% \certificate{Project Management Professional (PMP)}{Project Management Institute}{Jan 2017}  & \href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}\\
-% [1pt]
-% \certificate{AWS Certified Solutions Architect - Professional (SAP-C02)}{Amazon Web Services}{Jun 2024} & \href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}\\
-% [1pt]
-% \certificate{AWS Certified DevOps Engineer - Professional (DOP-C02)}{Amazon Web Services}{Jun 2024} & \href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}\\
-% [1pt]
-% \certificate{Certified Kubernetes Administrator (CKA)}{Kubernetes}{Jun 2024} & \href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}\\
-% [1pt]
-% \certificate{Certified Kubernetes Application Developer (CKAD)}{Kubernetes}{Jun 2024} & \href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}\\
-% [1pt]
-% \certificate{Certified Kubernetes Security Specialist (CKS)}{Kubernetes}{Jun 2024} & \href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}\\
-% [1pt]
-% \certificate{Certified ScrumMaster (CSM)}{Scrum Alliance}{Jan 2017}  & \href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}\\
-% [1pt]
-% \certificate{TOGAF Enterprise Architecture Practitioner}{The Open Group}{Jan 2017}  & \href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}\\
-% [1pt]
-% \certificate{Cisco Certified Network Associate (CCNA)}{Cisco}{Jan 2017}  & \href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}\\
-% [1pt]
-% \certificate{CompTIA Security+}{CompTIA}{Jan 2017}  & \href{https://github.com/chanyatfu/react-midi-editor}{\underline{Certificate}}\\
-% \end{tabular*}
+  % \certificateItem{AWS Certified SysOps Administrator - Associate (DVA-C02)}{Amazon Web Services}{Jun 2024}{https://github.com/chanyatfu/react-midi-editor}
 
+  \certificateItem{AWS Certified Cloud Practitioner (CLF-C02)}{Amazon Web Services}{May 2024}{https://www.credly.com/badges/36128c13-eafd-4d72-96fc-c8e78f9ba320/linked_in_profile}
+
+  % \certificateItem{HashiCorp Certified: Terraform Associate (HCTA0-003)}{HashiCorp}{Jun 2024}{https://github.com/chanyatfu/react-midi-editor}
+
+  % \certificateItem{Project Management Professional (PMP)}{Project Management Institute}{Jun 2024}{https://github.com/chanyatfu/react-midi-editor}
+
+  % \certificateItem{AWS Certified Solutions Architect - Professional (SAP-C02)}{Amazon Web Services}{Jun 2024}{https://github.com/chanyatfu/react-midi-editor}
+
+  % \certificateItem{AWS Certified DevOps Engineer - Professional (DOP-C02)}{Amazon Web Services}{Jun 2024}{https://github.com/chanyatfu/react-midi-editor}
+
+  % \certificateItem{Certified Kubernetes Administrator (CKA)}{Kubernetes}{Jun 2024}{https://github.com/chanyatfu/react-midi-editor}
+
+  % \certificateItem{Certified Kubernetes Application Developer (CKAD)}{Kubernetes}{Jun 2024}{https://github.com/chanyatfu/react-midi-editor}
+
+  % \certificateItem{Certified Kubernetes Security Specialist (CKS)}{Kubernetes}{Jun 2024}{https://github.com/chanyatfu/react-midi-editor}
+
+  % \certificateItem{Certified ScrumMaster (CSM)}{Scrum Alliance}{Jun 2024}{https://github.com/chanyatfu/react-midi-editor}
+
+  % \certificateItem{TOGAF Enterprise Architecture Practitioner}{The Open Group}{Jun 2024}{https://github.com/chanyatfu/react-midi-editor}
+
+  % \certificateItem{Cisco Certified Network Associate (CCNA)}{Cisco}{Jun 2024}{https://github.com/chanyatfu/react-midi-editor}
+
+  % \certificateItem{CompTIA Security+}{CompTIA}{Jun 2024}{https://github.com/chanyatfu/react-midi-editor}
+\end{spacedtabular*}
 
 %-----------COMPETITION HONORS AWARDS-----------
 \section{Competitions, Honors and Awards}
@@ -217,7 +221,7 @@
   \item \textbf{Led a 5-people backend development team} and was fully responsible for the \textbf{frontend} and \textbf{database} of the application.
   \item Provides \textbf{real-time course schedules} and information based on the user's context and timing.
   \item Integrated a \textbf{facial recognition} component for login using \textbf{Python}.
-  \item Utilised: Java, Spring Boot, React, TypeScript, Python, MySQL.
+  \item Utilised: Java, React, TypeScript, Python, MySQL.
 \end{tightitemize}
 
 \bb{\textbf{Hooks: React Hooks and Node.js Utilities Library (Individual)}}{\href{https://github.com/chanyatfu/hooks}{\underline{GitHub Repo}}}
@@ -228,12 +232,12 @@
   \item Utilised: React, TypeScript, Jest, RTL, Github Actions, Rollup.
 \end{tightitemize}
 
-\bb{\textbf{2-player Game (Java): Game Utilizing Socket and Multi-threading (Individual)}}{\href{https://github.com/chanyatfu/tic-tac-toe}{\underline{GitHub Repo}}}
-\begin{tightitemize}
-  \item Integrated \textbf{socket programming}, \textbf{multi-threading} to manage game state and user interactions.
-  \item Implemented a dynamic \textbf{Java Swing} GUI for real-time game status updates and player interactions.
-  \item Improved game stability by handling \textbf{network disruptions} and \textbf{player disconnections} effectively.
-\end{tightitemize}
+% \bb{\textbf{2-player Game (Java): Game Utilizing Socket and Multi-threading (Individual)}}{\href{https://github.com/chanyatfu/tic-tac-toe}{\underline{GitHub Repo}}}
+% \begin{tightitemize}
+%   \item Integrated \textbf{socket programming}, \textbf{multi-threading} to manage game state and user interactions.
+%   \item Implemented a dynamic \textbf{Java Swing} GUI for real-time game status updates and player interactions.
+%   \item Improved game stability by handling \textbf{network disruptions} and \textbf{player disconnections} effectively.
+% \end{tightitemize}
 
 
 %-----------PROGRAMMING SKILLS-----------
@@ -245,7 +249,7 @@
   [1pt]
   Cloud \& DevOps & AWS, Azure, Terraform, Docker, GitHub Actions \\
   [1pt]
-  Databases \& ORM & Redis, MySQL, MongoDB, Hibernate, Prisma \\
+  Databases \& ORM & Redis, MySQL, MongoDB, MySQL, PostgreSQL \\
 \end{tabular*}
 
 \vspace*{-32pt}
