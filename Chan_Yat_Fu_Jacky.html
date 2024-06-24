@@ -543,7 +543,6 @@
         </tbody>
       </table>
     </section>
-
     <script>
       class ContactInfo extends HTMLElement {
         static get observedAttributes() {
@@ -608,6 +607,29 @@
         }
       }
       customElements.define("contact-info", ContactInfo);
+    </script>
+    <script>
+      function showAllDetails() {
+        document
+          .querySelectorAll("details")
+          .forEach((detail) => (detail.open = true));
+      }
+
+      function hideAllDetails() {
+        document
+          .querySelectorAll("details")
+          .forEach((detail) => (detail.open = false));
+      }
+
+      document.addEventListener("keydown", function (event) {
+        if (event.ctrlKey) {
+          if (event.key === "S" || event.key === "s") {
+            showAllDetails();
+          } else if (event.key === "H" || event.key === "h") {
+            hideAllDetails();
+          }
+        }
+      });
     </script>
   </body>
 </html>
