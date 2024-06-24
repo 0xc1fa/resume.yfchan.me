@@ -203,18 +203,18 @@
         cursor: pointer;
       }
 
-      .bg-red {
-        background-color: red;
-      }
-
       .bg-green {
         background-color: green;
+      }
+
+      .bg-red {
+        background-color: red;
       }
     </style>
   </head>
   <body>
     <div
-      class="screen-only"
+      class="screen-only bg-green"
       id="popup"
       style="
         position: absolute;
@@ -249,12 +249,12 @@
     </div>
     <header>
       <h1>Chan Yat Fu Jacky</h1>
-      <div id="prev-commit-hash" hidden>211ea99</div>
+      <div id="prev-commit-hash" hidden>8e26f66</div>
       <address>
         <div class="screen-only">
           <i class="fa fa-download"></i
           ><a
-            href="out/Chan_Yat_Fu_Jacky.pdf"
+            href="http://058264110432-resume-site-ap-east-1.s3-website.ap-east-1.amazonaws.com/Chan_Yat_Fu_Jacky.pdf"
             target="_blank"
             download="Chan_Yat_Fu_Jacky.pdf"
             >Download</a
@@ -264,7 +264,7 @@
           <i class="fa fa-bullhorn"></i
           ><a
             id="check-update-anchor"
-            href="https://resume.yatfuchan.com/?from=211ea99"
+            href="http://058264110432-resume-site-ap-east-1.s3-website.ap-east-1.amazonaws.com/?from=8e26f66"
             target="_blank"
             >Check updates</a
           >
@@ -685,13 +685,11 @@
         const popupDiv = document.getElementById("popup");
         const upToDateInfoDiv = document.getElementById("up-to-date-info");
         if (params.from === currentHash) {
-          popupDiv.classList.add("bg-green");
           upToDateInfoDiv.textContent = "Your document is up to date";
-        } else if (params.from !== currentHash) {
+        } else if (params.from !== undefined && params.from !== currentHash) {
+          popupDiv.classList.remove("bg-green");
           popupDiv.classList.add("bg-red");
           upToDateInfoDiv.textContent = "Your document is NOT to date";
-        } else {
-          popupDiv.classList.add("bg-green");
         }
       }
       document.addEventListener("DOMContentLoaded", handleQueryParams);

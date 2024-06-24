@@ -1,3 +1,4 @@
 cmd/insert-commit-hash.sh
 node html2pdf.js
+git add Chan_Yat_Fu_Jacky.html out
 cmd/archive.sh
