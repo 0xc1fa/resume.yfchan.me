@@ -165,10 +165,47 @@
         details > summary {
           list-style: none;
         }
+
+        .web-only {
+          display: none;
+        }
+      }
+
+      .inherit {
+        background-color: inherit;
+        color: inherit;
+        border: inherit;
+      }
+
+      .hover-pointer:hover {
+        cursor: pointer;
       }
     </style>
   </head>
   <body>
+    <div
+      class="web-only"
+      style="
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+          Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+          sans-serif;
+        background-color: brown;
+        padding: 0.3em;
+        color: white;
+      "
+    >
+      <kbd>Ctrl+S</kbd>: Show all<br />
+      <kbd>Ctrl+H</kbd>: Hide all
+      <button
+        class="inherit hover-pointer"
+        onclick="removeParentElement(event)"
+      >
+        X
+      </button>
+    </div>
     <header>
       <h1>Chan Yat Fu Jacky</h1>
       <contact-info
@@ -630,6 +667,14 @@
           }
         }
       });
+    </script>
+    <script>
+      function removeParentElement(event) {
+        const parentElement = event.currentTarget.parentElement;
+        if (parentElement) {
+          parentElement.remove();
+        }
+      }
     </script>
   </body>
 </html>
