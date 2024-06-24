@@ -1,0 +1,3 @@
+cmd/insert-commit-hash.sh
+node html2pdf.js
+cmd/archive.sh

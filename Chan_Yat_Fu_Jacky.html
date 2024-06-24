@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -27,6 +27,20 @@
         font-family: "Computer Modern Serif", serif;
         margin: 0;
         padding: 1.5rem 3rem;
+      }
+
+      address {
+        font-style: normal;
+        margin: auto;
+        width: fit-content;
+        display: flex;
+        gap: 1rem;
+      }
+
+      address > div {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
       }
 
       h1 {
@@ -165,8 +179,16 @@
         details > summary {
           list-style: none;
         }
+      }
 
-        .web-only {
+      @media print {
+        .screen-only {
+          display: none;
+        }
+      }
+
+      @media screen {
+        .print-only {
           display: none;
         }
       }
@@ -180,23 +202,42 @@
       .hover-pointer:hover {
         cursor: pointer;
       }
+
+      .bg-red {
+        background-color: red;
+      }
+
+      .bg-green {
+        background-color: green;
+      }
     </style>
   </head>
   <body>
     <div
-      class="web-only"
+      class="screen-only"
+      id="popup"
       style="
         position: absolute;
         top: 0;
         right: 0;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-          Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          &quot;Segoe UI&quot;,
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          &quot;Open Sans&quot;,
+          &quot;Helvetica Neue&quot;,
           sans-serif;
-        background-color: brown;
         padding: 0.3em;
         color: white;
+        position: fixed;
       "
     >
+      <div id="up-to-date-info">Hello world</div>
       <kbd>Ctrl+S</kbd>: Show all<br />
       <kbd>Ctrl+H</kbd>: Hide all
       <button
@@ -208,14 +249,45 @@
     </div>
     <header>
       <h1>Chan Yat Fu Jacky</h1>
-      <contact-info
-        phone="+852 6467 6899"
-        email="yfchan.career@gmail.com"
-        github="0x001f"
-        linkedin="yatfuchan"
-      ></contact-info>
+      <div id="prev-commit-hash" hidden>211ea99</div>
+      <address>
+        <div class="screen-only">
+          <i class="fa fa-download"></i
+          ><a
+            href="out/Chan_Yat_Fu_Jacky.pdf"
+            target="_blank"
+            download="Chan_Yat_Fu_Jacky.pdf"
+            >Download</a
+          >
+        </div>
+        <div class="print-only">
+          <i class="fa fa-bullhorn"></i
+          ><a
+            id="check-update-anchor"
+            href="https://resume.yatfuchan.com/?from=211ea99"
+            target="_blank"
+            >Check updates</a
+          >
+        </div>
+        <div><i class="fa fa-phone"></i><span>+852 6467 6899</span></div>
+        <div>
+          <i class="fa fa-envelope"></i
+          ><a href="mailto:yfchan.career@gmail.com" target="_blank"
+            >yfchan.career@gmail.com</a
+          >
+        </div>
+        <div>
+          <i class="fa fa-github"></i
+          ><a href="https://github.com/0x001f" target="_blank">0x001f</a>
+        </div>
+        <div>
+          <i class="fa fa-linkedin-square"></i
+          ><a href="https://linkedin.com/in/yatfuchan" target="_blank"
+            >in/yatfuchan</a
+          >
+        </div>
+      </address>
     </header>
-
     <section id="education-section">
       <h2>Education</h2>
       <ul class="no-bullets">
@@ -261,7 +333,6 @@
         </li>
       </ul>
     </section>
-
     <section id="compeititions-section">
       <h2>Competitions, Honors and Awards</h2>
       <ul class="no-bullets">
@@ -310,7 +381,6 @@
         </li>
       </ul>
     </section>
-
     <section id="professional-certifications-section">
       <h2>Professional Certifications</h2>
       <ul class="no-bullets">
@@ -326,7 +396,6 @@
         </li>
       </ul>
     </section>
-
     <section id="work-experience-section">
       <h2>Work Experience</h2>
       <ul class="semantic-only">
@@ -368,7 +437,6 @@
                   </li>
                 </ul>
               </li>
-
               <li>
                 <h4 class="font-normal italic inline-block">
                   Software Developer - Intern / Jun 2023 - Aug 2023
@@ -376,8 +444,7 @@
                 <ul>
                   <li>
                     Engineered a data processing pipeline that gather and
-                    cleanup
-                    <strong>500+ hours of audio data</strong> using
+                    cleanup <strong>500+ hours of audio data</strong> using
                     <strong>Python and Selenium</strong>.
                   </li>
                   <li>
@@ -400,7 +467,6 @@
             </ul>
           </details>
         </li>
-
         <li>
           <details open>
             <summary>
@@ -424,8 +490,8 @@
                   </li>
                   <li>
                     Increased email open and engagement rates by
-                    <strong>22%</strong> and <strong>17%</strong>
-                    respectively by improving content quality.
+                    <strong>22%</strong> and <strong>17%</strong> respectively
+                    by improving content quality.
                   </li>
                   <li>
                     Applied knowledge in <strong>Python</strong> and
@@ -438,7 +504,6 @@
         </li>
       </ul>
     </section>
-
     <section id="projects-section">
       <h2>Projects</h2>
       <ul class="no-bullets">
@@ -475,7 +540,6 @@
             </ul>
           </details>
         </li>
-
         <li>
           <details open>
             <summary>
@@ -496,10 +560,7 @@
                 fully responsible for the <strong>frontend</strong> and
                 <strong>database</strong> of the application.
               </li>
-              <!-- <li>
-              Provides <strong>real-time course schedules</strong> and
-              information based on the user's context and timing.
-            </li> -->
+              <!-- <li>              Provides <strong>real-time course schedules</strong> and              information based on the user's context and timing.            </li> -->
               <li>
                 Integrated a <strong>facial recognition</strong> component for
                 login using <strong>Python</strong>.
@@ -507,7 +568,6 @@
             </ul>
           </details>
         </li>
-
         <li>
           <details open>
             <summary>
@@ -534,7 +594,6 @@
             </ul>
           </details>
         </li>
-
         <li>
           <details open>
             <summary>
@@ -554,7 +613,6 @@
         </li>
       </ul>
     </section>
-
     <section id="technical-skills-section">
       <h2>Technical Skills</h2>
       <table class="technicalskills-table">
@@ -581,83 +639,16 @@
       </table>
     </section>
     <script>
-      class ContactInfo extends HTMLElement {
-        static get observedAttributes() {
-          return ["phone", "email", "github", "linkedin"];
-        }
-
-        constructor() {
-          super();
-          const shadow = this.attachShadow({ mode: "open" });
-          const style = document.createElement("style");
-          style.textContent = `
-            @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
-            .contact-info {
-              font-style: normal;
-              margin: auto;
-              width: fit-content;
-              display: flex;
-              gap: 1rem;
-            }
-            .contact-info div {
-              display: flex;
-              align-items: center;
-              gap: 0.3rem;
-            }
-            a {
-              color: black;
-            }
-            a:hover {
-              background-color: wheat;
-            }
-          `;
-          const wrapper = document.createElement("address");
-          wrapper.classList.add("contact-info");
-          shadow.appendChild(style);
-          shadow.appendChild(wrapper);
-          this.wrapper = wrapper;
-        }
-
-        attributeChangedCallback(name, oldValue, newValue) {
-          this.render();
-        }
-
-        render() {
-          const phone = this.getAttribute("phone");
-          const email = this.getAttribute("email");
-          const github = this.getAttribute("github");
-          const linkedin = this.getAttribute("linkedin");
-          this.wrapper.innerHTML = `
-            <div>
-              <i class="fa fa-phone"></i><span>${phone}</span>
-            </div>
-            <div>
-              <i class="fa fa-envelope"></i><a href="mailto:${email}" target="_blank">${email}</a>
-            </div>
-            <div>
-              <i class="fa fa-github"></i><a href="https://github.com/${github}" target="_blank">${github}</a>
-            </div>
-            <div>
-              <i class="fa fa-linkedin-square"></i><a href="https://linkedin.com/in/${linkedin}" target="_blank">in/${linkedin}</a>
-            </div>
-          `;
-        }
-      }
-      customElements.define("contact-info", ContactInfo);
-    </script>
-    <script>
       function showAllDetails() {
         document
           .querySelectorAll("details")
           .forEach((detail) => (detail.open = true));
       }
-
       function hideAllDetails() {
         document
           .querySelectorAll("details")
           .forEach((detail) => (detail.open = false));
       }
-
       document.addEventListener("keydown", function (event) {
         if (event.ctrlKey) {
           if (event.key === "S" || event.key === "s") {
@@ -675,6 +666,35 @@
           parentElement.remove();
         }
       }
+    </script>
+    <script>
+      function getQueryParams() {
+        const params = {};
+        const queryString = window.location.search.slice(1);
+        const queries = queryString.split("&");
+        queries.forEach((query) => {
+          const [key, value] = query.split("=");
+          params[key] = decodeURIComponent(value || "");
+        });
+        return params;
+      }
+      function handleQueryParams() {
+        const currentHash =
+          document.getElementById("prev-commit-hash").textContent;
+        const params = getQueryParams();
+        const popupDiv = document.getElementById("popup");
+        const upToDateInfoDiv = document.getElementById("up-to-date-info");
+        if (params.from === currentHash) {
+          popupDiv.classList.add("bg-green");
+          upToDateInfoDiv.textContent = "Your document is up to date";
+        } else if (params.from !== currentHash) {
+          popupDiv.classList.add("bg-red");
+          upToDateInfoDiv.textContent = "Your document is NOT to date";
+        } else {
+          popupDiv.classList.add("bg-green");
+        }
+      }
+      document.addEventListener("DOMContentLoaded", handleQueryParams);
     </script>
   </body>
 </html>
