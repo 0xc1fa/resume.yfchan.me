@@ -29,10 +29,6 @@
         padding: 1.5rem 3rem;
       }
 
-      address {
-        font-style: normal;
-      }
-
       h1 {
         text-align: center;
         font-variant: small-caps;
@@ -175,29 +171,12 @@
   <body>
     <header>
       <h1>Chan Yat Fu Jacky</h1>
-      <address
-        style="margin: auto; width: fit-content; display: flex; gap: 1rem"
-      >
-        <div class="small-gap">
-          <i class="fa fa-phone"></i><span>+852 6467 6899</span>
-        </div>
-        <div class="small-gap">
-          <i class="fa fa-envelope"></i
-          ><a href="mailto:yfchan.career@gmail.com" target="_blank"
-            >yfchan.career@gmail.com</a
-          >
-        </div>
-        <div class="small-gap">
-          <i class="fa fa-github"></i
-          ><a href="https://github.com/0x001f" target="_blank">0x001f</a>
-        </div>
-        <div class="small-gap">
-          <i class="fa fa-linkedin-square"></i
-          ><a href="https://hk.linkedin.com/in/yatfuchan" target="_blank"
-            >in/yatfuchan</a
-          >
-        </div>
-      </address>
+      <contact-info
+        phone="+852 6467 6899"
+        email="yfchan.career@gmail.com"
+        github="0x001f"
+        linkedin="yatfuchan"
+      ></contact-info>
     </header>
 
     <section id="education-section">
@@ -564,5 +543,71 @@
         </tbody>
       </table>
     </section>
+
+    <script>
+      class ContactInfo extends HTMLElement {
+        static get observedAttributes() {
+          return ["phone", "email", "github", "linkedin"];
+        }
+
+        constructor() {
+          super();
+          const shadow = this.attachShadow({ mode: "open" });
+          const style = document.createElement("style");
+          style.textContent = `
+            @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+            .contact-info {
+              font-style: normal;
+              margin: auto;
+              width: fit-content;
+              display: flex;
+              gap: 1rem;
+            }
+            .contact-info div {
+              display: flex;
+              align-items: center;
+              gap: 0.3rem;
+            }
+            a {
+              color: black;
+            }
+            a:hover {
+              background-color: wheat;
+            }
+          `;
+          const wrapper = document.createElement("address");
+          wrapper.classList.add("contact-info");
+          shadow.appendChild(style);
+          shadow.appendChild(wrapper);
+          this.wrapper = wrapper;
+        }
+
+        attributeChangedCallback(name, oldValue, newValue) {
+          this.render();
+        }
+
+        render() {
+          const phone = this.getAttribute("phone");
+          const email = this.getAttribute("email");
+          const github = this.getAttribute("github");
+          const linkedin = this.getAttribute("linkedin");
+          this.wrapper.innerHTML = `
+            <div>
+              <i class="fa fa-phone"></i><span>${phone}</span>
+            </div>
+            <div>
+              <i class="fa fa-envelope"></i><a href="mailto:${email}" target="_blank">${email}</a>
+            </div>
+            <div>
+              <i class="fa fa-github"></i><a href="https://github.com/${github}" target="_blank">${github}</a>
+            </div>
+            <div>
+              <i class="fa fa-linkedin-square"></i><a href="https://linkedin.com/in/${linkedin}" target="_blank">in/${linkedin}</a>
+            </div>
+          `;
+        }
+      }
+      customElements.define("contact-info", ContactInfo);
+    </script>
   </body>
 </html>
