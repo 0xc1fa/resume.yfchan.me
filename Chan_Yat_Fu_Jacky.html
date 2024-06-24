@@ -34,6 +34,8 @@
         margin: auto;
         width: fit-content;
         display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
         gap: 1rem;
       }
 
@@ -146,6 +148,22 @@
         float: right;
       }
 
+      @media screen and (max-width: 470px) {
+        .mobile-hide {
+          display: none;
+        }
+
+        html {
+          font-size: 8pt;
+        }
+      }
+
+      @media screen and (min-width: 470px) {
+        .float-right {
+          float: right;
+        }
+      }
+
       .inline-block {
         display: inline-block;
       }
@@ -249,7 +267,7 @@
     </div>
     <header>
       <h1>Chan Yat Fu Jacky</h1>
-      <div id="prev-commit-hash" hidden>8e26f66</div>
+      <div id="prev-commit-hash" hidden>e7a7147</div>
       <address>
         <div class="screen-only">
           <i class="fa fa-download"></i
@@ -264,7 +282,7 @@
           <i class="fa fa-bullhorn"></i
           ><a
             id="check-update-anchor"
-            href="http://058264110432-resume-site-ap-east-1.s3-website.ap-east-1.amazonaws.com/?from=8e26f66"
+            href="http://058264110432-resume-site-ap-east-1.s3-website.ap-east-1.amazonaws.com/?from=e7a7147"
             target="_blank"
             >Check updates</a
           >
@@ -387,12 +405,15 @@
         <li style="margin-bottom: 0.1rem">
           <strong
             >AWS Certified Solutions Architect - Associate (SAA-C03)</strong
+          ><span class="mobile-hide">
+            &mdash; Amazon Web Services [Jun 2024]</span
           >
-          &mdash; Amazon Web Services [Jun 2024]
         </li>
         <li>
-          <strong>AWS Certified Cloud Practitioner (CLF-C02)</strong> &mdash;
-          Amazon Web Services [May 2024]
+          <strong>AWS Certified Cloud Practitioner (CLF-C02)</strong
+          ><span class="mobile-hide">
+            &mdash; Amazon Web Services [May 2024]</span
+          >
         </li>
       </ul>
     </section>
@@ -514,7 +535,10 @@
                 Wavy: Web-based Music Workstation (Individual)
               </h3>
               <div class="float-right font-bold">
-                <a href="http://youtu.be/uQ2K_xgbq7g" target="_blank"
+                <a
+                  href="http://youtu.be/uQ2K_xgbq7g"
+                  target="_blank"
+                  class="mobile-hide"
                   >Demo Video</a
                 >
               </div>
@@ -550,6 +574,7 @@
                 <a
                   href="https://www.youtube.com/watch?v=4uMUNsvreuI"
                   target="_blank"
+                  class="mobile-hide"
                   >Demo Video</a
                 >
               </div>
