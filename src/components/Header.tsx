@@ -10,7 +10,7 @@ import { HeaderItem, HeaderItemProps } from "./HeaderItem";
 import { getCommitHash } from "@/utils/getCommitHash";
 
 export default async function Header() {
-  const commitHash = getCommitHash();
+  const commitHash: string = await getCommitHash();
 
   const items: HeaderItemProps[] = [
     {
