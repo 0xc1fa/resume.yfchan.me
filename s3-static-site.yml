@@ -1,0 +1,42 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Parameters:
+  StackName:
+    Type: String
+    Description: "The name of the CloudFormation stack, used to name the S3 bucket."
+  DomainName:
+    Type: String
+    Description: "The domain name for the hosted zone."
+
+Resources:
+  S3Bucket:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      BucketName: !Ref DomainName
+      WebsiteConfiguration:
+        IndexDocument: "index.html"
+        ErrorDocument: "404.html"
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: false
+        BlockPublicPolicy: false
+        IgnorePublicAcls: false
+        RestrictPublicBuckets: false
+
+  S3BucketPolicy:
+    Type: "AWS::S3::BucketPolicy"
+    Properties:
+      Bucket: !Ref S3Bucket
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal: "*"
+            Action: "s3:GetObject"
+            Resource: !Sub "arn:aws:s3:::${DomainName}/*"
+
+Outputs:
+  WebsiteURL:
+    Description: "URL of the S3 bucket static website"
+    Value: !GetAtt S3Bucket.WebsiteURL
+  BucketName:
+    Description: "Name of the S3 bucket"
+    Value: !Ref S3Bucket
