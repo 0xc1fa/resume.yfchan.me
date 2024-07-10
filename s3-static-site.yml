@@ -8,7 +8,7 @@ Resources:
   S3Bucket:
     Type: "AWS::S3::Bucket"
     Properties:
-      BucketName: !Sub "${AWS::AccountId}-${AWS::StackName}"
+      BucketName: !Sub "resume.yfchan.me"
       WebsiteConfiguration:
         IndexDocument: "Chan_Yat_Fu_Jacky.html"
         ErrorDocument: "Chan_Yat_Fu_Jacky.html"
@@ -28,7 +28,7 @@ Resources:
           - Effect: Allow
             Principal: "*"
             Action: "s3:GetObject"
-            Resource: !Sub "arn:aws:s3:::${AWS::AccountId}-${AWS::StackName}/*"
+            Resource: !Sub "arn:aws:s3:::resume.yfchan.me/*"
 
 Outputs:
   WebsiteURL:

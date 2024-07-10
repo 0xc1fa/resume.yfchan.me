@@ -37,18 +37,18 @@ jobs:
           aws cloudformation deploy \
             --template-file s3-static-site.yml \
             --region ap-east-1 \
-            --stack-name resume-site-ap-east-1 \
+            --stack-name resume-site \
             --capabilities CAPABILITY_NAMED_IAM \
-            --parameter-overrides StackName=resume-site-ap-east-1
+            --parameter-overrides StackName=resume-site
 
       - name: Wait for CloudFormation stack to complete
         run: |
-          aws cloudformation wait stack-create-complete --stack-name resume-site-ap-east-1
+          aws cloudformation wait stack-create-complete --stack-name resume-site
 
       - name: Sync S3 bucket
         run: |
           cp Chan_Yat_Fu_Jacky.html out/Chan_Yat_Fu_Jacky.html
-          BUCKET_NAME=$(aws cloudformation describe-stacks --stack-name resume-site-ap-east-1 --query "Stacks[0].Outputs[?OutputKey=='BucketName'].OutputValue" --output text)
+          BUCKET_NAME=$(aws cloudformation describe-stacks --stack-name resume-site --query "Stacks[0].Outputs[?OutputKey=='BucketName'].OutputValue" --output text)
           aws s3 sync ./out s3://$BUCKET_NAME --delete
-          WEBSITE_URL=$(aws cloudformation describe-stacks --stack-name resume-site-ap-east-1 --query "Stacks[0].Outputs[?OutputKey=='WebsiteURL'].OutputValue" --output text)
+          WEBSITE_URL=$(aws cloudformation describe-stacks --stack-name resume-site --query "Stacks[0].Outputs[?OutputKey=='WebsiteURL'].OutputValue" --output text)
           echo "Website URL: $WEBSITE_URL"
