@@ -28,6 +28,9 @@ jobs:
       - name: Build project and export static site
         run: pnpm build
 
+      - name: Generate PDF File
+        run: node cmd/html2pdf.js
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v3
         with:
@@ -52,13 +55,5 @@ jobs:
         run: |
           BUCKET_NAME=$(aws cloudformation describe-stacks --stack-name resume-site --query "Stacks[0].Outputs[?OutputKey=='BucketName'].OutputValue" --output text)
           aws s3 sync ./out s3://$BUCKET_NAME --delete
-          WEBSITE_URL=$(aws cloudformation describe-stacks --stack-name resume-site --query "Stacks[0].Outputs[?OutputKey=='WebsiteURL'].OutputValue" --output text)
-          echo "Website URL: $WEBSITE_URL"
-
-      - name: Generate PDF File
-        run: |
-          node cmd/html2pdf.js
-          BUCKET_NAME=$(aws cloudformation describe-stacks --stack-name resume-site --query "Stacks[0].Outputs[?OutputKey=='BucketName'].OutputValue" --output text)
-          aws s3 cp ./out/Chan_Yat_Fu_Jacky.pdf s3://$BUCKET_NAME/Chan_Yat_Fu_Jacky.pdf
           WEBSITE_URL=$(aws cloudformation describe-stacks --stack-name resume-site --query "Stacks[0].Outputs[?OutputKey=='WebsiteURL'].OutputValue" --output text)
           echo "Website URL: $WEBSITE_URL"
