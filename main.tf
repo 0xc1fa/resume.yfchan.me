@@ -20,11 +20,11 @@ resource "aws_s3_bucket_website_configuration" "website_config" {
   bucket = aws_s3_bucket.website_bucket.id
 
   index_document {
-    suffix = "Chan_Yat_Fu_Jacky.html"
+    suffix = "index.html"
   }
 
   error_document {
-    key = "Chan_Yat_Fu_Jacky.html"
+    key = "404.html"
   }
 }
 

@@ -1,10 +1,3 @@
-FILE="Chan_Yat_Fu_Jacky.html"
-if git diff --cached --name-only | grep -q "$FILE"; then
-    echo "The file $FILE is staged."
-    cmd/insert-commit-hash.sh
-    node cmd/html2pdf.js
-    git add Chan_Yat_Fu_Jacky.html out
-    cmd/archive.sh
-else
-    echo "The file $FILE is not staged. Skipping hook."
-fi
+pnpm build
+node cmd/html2pdf.js
+cmd/archive.sh

@@ -7,8 +7,7 @@ const path = require("path");
 
   const rootDir = process.cwd();
 
-  // Resolve the relative path to the index.html
-  const filePath = path.resolve(rootDir, "./Chan_Yat_Fu_Jacky.html");
+  const filePath = path.resolve(rootDir, "./out/index.html");
   const fileUrl = `file://${filePath}`;
 
   await page.goto(fileUrl, { waitUntil: "networkidle2" });
