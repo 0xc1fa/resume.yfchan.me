@@ -14,7 +14,14 @@ export default function Toast(props: ToastProps) {
   return (
     <div
       hidden={closed}
-      className={clsx("screen-only", "bg-green")}
+      className={clsx(
+        "screen-only",
+        !fromHash
+          ? "bg-green"
+          : fromHash === props.thisHash
+          ? "bg-green"
+          : "bg-red"
+      )}
       id="popup"
       style={{
         top: 0,
