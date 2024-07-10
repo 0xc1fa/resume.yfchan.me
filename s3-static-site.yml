@@ -3,12 +3,15 @@ Parameters:
   StackName:
     Type: String
     Description: "The name of the CloudFormation stack, used to name the S3 bucket."
+  DomainName:
+    Type: String
+    Description: "The domain name for the hosted zone."
 
 Resources:
   S3Bucket:
     Type: "AWS::S3::Bucket"
     Properties:
-      BucketName: !Sub "resume.yfchan.me"
+      BucketName: !Ref DomainName
       WebsiteConfiguration:
         IndexDocument: "Chan_Yat_Fu_Jacky.html"
         ErrorDocument: "Chan_Yat_Fu_Jacky.html"
@@ -28,7 +31,22 @@ Resources:
           - Effect: Allow
             Principal: "*"
             Action: "s3:GetObject"
-            Resource: !Sub "arn:aws:s3:::resume.yfchan.me/*"
+            Resource: !Sub "arn:aws:s3:::${DomainName}/*"
+
+  HostedZone:
+    Type: "AWS::Route53::HostedZone"
+    Properties:
+      Name: !Ref DomainName
+
+  S3BucketRecordSet:
+    Type: "AWS::Route53::RecordSet"
+    Properties:
+      HostedZoneId: !Ref HostedZone
+      Name: !Ref DomainName
+      Type: A
+      AliasTarget:
+        DNSName: !GetAtt S3Bucket.WebsiteURL
+        HostedZoneId: "ZNB98KWMFR0R6"
 
 Outputs:
   WebsiteURL:

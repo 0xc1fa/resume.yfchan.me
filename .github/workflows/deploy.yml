@@ -39,7 +39,7 @@ jobs:
             --region ap-east-1 \
             --stack-name resume-site \
             --capabilities CAPABILITY_NAMED_IAM \
-            --parameter-overrides StackName=resume-site
+            --parameter-overrides StackName=resume-site DomainName=resume.yfchan.me
 
       - name: Wait for CloudFormation stack to complete
         run: |
