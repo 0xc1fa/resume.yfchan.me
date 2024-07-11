@@ -10,17 +10,40 @@ export function markdown(
 
     parts.forEach((part, index) => {
       const subParts = part.split("--");
+      const subParsedParts: ReactNode[] = [];
+
       subParts.forEach((subPart, subIndex) => {
-        parsedParts.push(subPart);
+        const linkParts = subPart.split(/(\[.*?\]\(.*?\))/g);
+        linkParts.forEach((linkPart, linkIndex) => {
+          if (linkPart.match(/\[.*?\]\(.*?\)/)) {
+            const match = linkPart.match(/\[(.*?)\]\((.*?)\)/);
+            if (match) {
+              const [, text, url] = match;
+              subParsedParts.push(
+                <a
+                  href={url}
+                  key={`link-${i}-${index}-${subIndex}-${linkIndex}`}
+                >
+                  {text}
+                </a>
+              );
+            }
+          } else {
+            subParsedParts.push(linkPart);
+          }
+        });
+
         if (subIndex < subParts.length - 1) {
-          parsedParts.push(<>&mdash;</>);
+          subParsedParts.push(<>&mdash;</>);
         }
       });
 
       if (index % 2 === 1) {
         parsedParts.push(
-          <strong key={`bold-${i}-${index}`}>{parsedParts.pop()}</strong>
+          <strong key={`bold-${i}-${index}`}>{subParsedParts}</strong>
         );
+      } else {
+        parsedParts.push(...subParsedParts);
       }
     });
 

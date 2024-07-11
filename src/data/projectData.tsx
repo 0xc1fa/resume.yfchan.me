@@ -20,14 +20,9 @@ export const projectData: GeneralInfo[] = [
       markdown`
         Integrated backend voice synthesizer enabling the **generation of vocal tracks**.
       `,
-      <>
-        {markdown`
-          Provided an isolated library for **custom utilization** and **style modification**. | Demo video:
-        `}
-        <a href="http://youtu.be/uQ2K_xgbq7g" target="_blank">
-          http://youtu.be/uQ2K_xgbq7g
-        </a>
-      </>,
+      markdown`
+        Provided an isolated library for **custom utilization** and **style modification**. | Demo video: [http://youtu.be/uQ2K_xgbq7g](http://youtu.be/uQ2K_xgbq7g)
+      `,
     ],
   },
   {
