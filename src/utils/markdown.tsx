@@ -9,10 +9,18 @@ export function markdown(
     const parsedParts: ReactNode[] = [];
 
     parts.forEach((part, index) => {
+      const subParts = part.split("--");
+      subParts.forEach((subPart, subIndex) => {
+        parsedParts.push(subPart);
+        if (subIndex < subParts.length - 1) {
+          parsedParts.push(<>&mdash;</>);
+        }
+      });
+
       if (index % 2 === 1) {
-        parsedParts.push(<strong key={`bold-${i}-${index}`}>{part}</strong>);
-      } else {
-        parsedParts.push(part);
+        parsedParts.push(
+          <strong key={`bold-${i}-${index}`}>{parsedParts.pop()}</strong>
+        );
       }
     });
 

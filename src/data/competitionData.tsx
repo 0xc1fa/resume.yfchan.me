@@ -9,7 +9,9 @@ type CompetitionDataItem = {
 
 export const competitionData: CompetitionDataItem[] = [
   {
-    title: <>Finalist &mdash; HKU Generative AI Hackathon for Social Good</>,
+    title: markdown`
+Finalist -- HKU Generative AI Hackathon for Social Good
+    `,
     date: new Date("2023-10"),
     bullets: [
       markdown`
@@ -21,7 +23,9 @@ export const competitionData: CompetitionDataItem[] = [
     ],
   },
   {
-    title: <>Winner &mdash; HKU Final Year Project Competition</>,
+    title: markdown`
+Winner -- HKU Final Year Project Competition
+    `,
     date: new Date("2024-04"),
     bullets: [
       markdown`
