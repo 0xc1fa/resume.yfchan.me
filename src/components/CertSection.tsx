@@ -1,13 +1,14 @@
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { CertItem } from "./CertItem";
 import { certData } from "@/data/certsData";
+import { certificationSiteUrl } from "@/data/url";
 
 export function CertSection() {
   return (
     <section id="professional-certifications-section">
       <h2 style={{ display: "flex", alignItems: "center" }}>
         <a
-          href="http://certifications.yfchan.me"
+          href={certificationSiteUrl}
           target="_blank"
           style={{ color: "var(--accent-color)" }}
         >
