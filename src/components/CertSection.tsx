@@ -7,7 +7,7 @@ export function CertSection() {
     <section id="professional-certifications-section">
       <h2 style={{ display: "flex", alignItems: "center" }}>
         <a
-          href="http://058264110432-certifications-site-ap-east-1.s3-website.ap-east-1.amazonaws.com"
+          href="http://certifications.yfchan.me"
           target="_blank"
           style={{ color: "var(--accent-color)" }}
         >
