@@ -17,8 +17,8 @@ export function CertSection() {
         </a>
       </h2>
       <ul className="no-bullets">
-        {certData.map((x) => (
-          <CertItem key={x.title} {...x} />
+        {certData.map((x, index) => (
+          <CertItem key={index} {...x} />
         ))}
       </ul>
     </section>

@@ -6,8 +6,8 @@ export function ProjectSection() {
     <section id="projects-section">
       <h2>Projects</h2>
       <ul className="no-bullets">
-        {projectData.map((x, i) => (
-          <li key={i}>
+        {projectData.map((x, index) => (
+          <li key={index}>
             <Collapsible
               title={
                 <>

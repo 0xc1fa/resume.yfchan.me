@@ -6,8 +6,8 @@ export function SkillsSection() {
       <h2>Technical Skills</h2>
       <table className="technicalskills-table">
         <tbody>
-          {skillsData.map((x, i) => (
-            <tr key={i}>
+          {skillsData.map((x, index) => (
+            <tr key={index}>
               <th scope="row">{x.category}</th>
               <td>{x.items.join(", ")}</td>
             </tr>
