@@ -41,7 +41,7 @@ export const projectData: GeneralInfo[] = [
         **Led a 5-people backend development team** and was fully responsible for the **frontend** and **database** of the application.
       `,
       markdown`
-        Provides **real-time course schedules** and information based on the user&apos;s context and timing.
+        Provides **real-time course schedules** and information based on the user's context and timing.
       `,
       markdown`
         Integrated a **facial recognition** component for login using **Python**.
