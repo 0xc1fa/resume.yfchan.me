@@ -11,7 +11,7 @@ type CompetitionDataItem = {
 export const competitionData: CompetitionDataItem[] = [
   {
     title: (
-      <M>Finalist &mdash; HKU Generative AI Hackathon for Social Goodddd</M>
+      <M>Finalist &mdash; HKU Generative AI Hackathon for Social Good</M>
     ),
     date: new Date("2023-10"),
     bullets: [
