@@ -1,6 +1,9 @@
 import { GeneralInfo, WorkExperienceInfo } from "@/types/contactInfo";
 import { markdown } from "@/utils/markdown";
+import M from "markdown-to-jsx";
 
+/* eslint-disable react/jsx-key */
+/* eslint-disable react/no-unescaped-entities */
 export const projectData: GeneralInfo[] = [
   {
     title: "Wavy: A web-based Music Workstation (Individual)",
@@ -14,15 +17,19 @@ export const projectData: GeneralInfo[] = [
       </a>
     ),
     details: [
-      markdown`
-        Enhanced UX with a **resizable** and **scrollable** canvas featuring history, import/export, and clipboard functionalities.
-      `,
-      markdown`
-        Integrated backend voice synthesizer enabling the **generation of vocal tracks**.
-      `,
-      markdown`
-        Provided an isolated library for **custom utilization** and **style modification**. | Demo video: [http://youtu.be/uQ2K_xgbq7g](http://youtu.be/uQ2K_xgbq7g)
-      `,
+      <M>
+        Enhanced UX with a **resizable** and **scrollable** canvas featuring
+        history, import/export, and clipboard functionalities.
+      </M>,
+      <M>
+        Integrated backend voice synthesizer enabling the **generation of vocal
+        tracks**.
+      </M>,
+      <M>
+        Provided an isolated library for **custom utilization** and **style
+        modification**. | Demo video:
+        [http://youtu.be/uQ2K_xgbq7g](http://youtu.be/uQ2K_xgbq7g)
+      </M>,
     ],
   },
   {
@@ -37,15 +44,18 @@ export const projectData: GeneralInfo[] = [
       </a>
     ),
     details: [
-      markdown`
-        **Led a 5-people backend development team** and was fully responsible for the **frontend** and **database** of the application.
-      `,
-      markdown`
-        Provides **real-time course schedules** and information based on the user's context and timing.
-      `,
-      markdown`
-        Integrated a **facial recognition** component for login using **Python**.
-      `,
+      <M>
+        **Led a 5-people backend development team** and was fully responsible
+        for the **frontend** and **database** of the application.
+      </M>,
+      <M>
+        Provides **real-time course schedules** and information based on the
+        user's context and timing.
+      </M>,
+      <M>
+        Integrated a **facial recognition** component for login using
+        **Python**.
+      </M>,
     ],
   },
 
@@ -53,27 +63,32 @@ export const projectData: GeneralInfo[] = [
     title:
       "2-player Game: Game Utilizing Socket and Multi-threading (Individual)",
     details: [
-      markdown`
-        Integrated **socket programming**, **multi-threading** to manage game state and user interactions.
-      `,
-      markdown`
-        Implemented a dynamic **Java Swing** GUI for real-time game status updates and player interactions.
-      `,
-      markdown`
-        Improved game stability by handling **network disruptions** and **player disconnections** effectively.
-      `,
+      <M>
+        Integrated **socket programming**, **multi-threading** to manage game
+        state and user interactions.
+      </M>,
+      <M>
+        Implemented a dynamic **Java Swing** GUI for real-time game status
+        updates and player interactions.
+      </M>,
+      <M>
+        Improved game stability by handling **network disruptions** and **player
+        disconnections** effectively.
+      </M>,
     ],
   },
 
   {
     title: "Folded: A interactive GUI card game (Individual)",
     details: [
-      markdown`
-        Developed a **Java-based** card game using Swing, managing shuffling, betting, and rule enforcement.
-      `,
-      markdown`
-        Created interactive GUI elements for card replacement and result evaluation.
-      `,
+      <M>
+        Developed a **Java-based** card game using Swing, managing shuffling,
+        betting, and rule enforcement.
+      </M>,
+      <M>
+        Created interactive GUI elements for card replacement and result
+        evaluation.
+      </M>,
     ],
   },
 ];

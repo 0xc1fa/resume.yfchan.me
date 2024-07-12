@@ -11,6 +11,9 @@ dependencies:
   express:
     specifier: ^4.19.2
     version: 4.19.2
+  markdown-to-jsx:
+    specifier: ^7.4.7
+    version: 7.4.7(react@18.3.1)
   next:
     specifier: 14.2.5
     version: 14.2.5(react-dom@18.3.1)(react@18.3.1)
@@ -2463,6 +2466,15 @@ packages:
   /lru-cache@7.18.3:
     resolution: {integrity: sha512-jumlc0BIUrS3qJGgIkWZsyfAM7NCWiBcCDhnd+3NNM5KbBmLTgHVfWBcg6W+rLUsIpzpERPsvwUP7CckAQSOoA==}
     engines: {node: '>=12'}
+    dev: false
+
+  /markdown-to-jsx@7.4.7(react@18.3.1):
+    resolution: {integrity: sha512-0+ls1IQZdU6cwM1yu0ZjjiVWYtkbExSyUIFU2ZeDIFuZM1W42Mh4OlJ4nb4apX4H8smxDHRdFaoIVJGwfv5hkg==}
+    engines: {node: '>= 10'}
+    peerDependencies:
+      react: '>= 0.14.0'
+    dependencies:
+      react: 18.3.1
     dev: false
 
   /media-typer@0.3.0:
