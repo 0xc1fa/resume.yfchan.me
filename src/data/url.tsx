@@ -1,1 +1,1 @@
-export const certificationSiteUrl = "http://certifications.yfchan.me";
+export const certificationSiteUrl = "https://certifications.yfchan.me";
