@@ -36,7 +36,7 @@ export async function getHeaderData(): Promise<HeaderItemProps[]> {
 			icon: <FaEnvelope />,
 		},
 		{
-			title: "0x001f",
+			title: "0xc1fa",
 			href: "https://github.com/0xc1fa",
 			icon: <FaGithub />,
 		},
