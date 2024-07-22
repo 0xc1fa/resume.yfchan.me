@@ -1,5 +1,5 @@
-import { HeaderItemProps } from "@/components/HeaderItem"
-import { getCommitHash } from "@/utils/getCommitHash"
+import { HeaderItemProps } from "@/components/HeaderItem";
+import { getCommitHash } from "@/utils/getCommitHash";
 import {
 	FaBullhorn,
 	FaDownload,
@@ -7,10 +7,10 @@ import {
 	FaGithub,
 	FaLinkedin,
 	FaPhoneAlt,
-} from "react-icons/fa"
+} from "react-icons/fa";
 
 export async function getHeaderData(): Promise<HeaderItemProps[]> {
-	const commitHash: string = await getCommitHash()
+	const commitHash: string = await getCommitHash();
 
 	return [
 		{
@@ -31,8 +31,10 @@ export async function getHeaderData(): Promise<HeaderItemProps[]> {
 			icon: <FaPhoneAlt />,
 		},
 		{
-			title: "career@yfchan.me",
-			href: "mailto:career@yfchan.me",
+			// title: "career@yfchan.me",
+			// href: "mailto:career@yfchan.me",
+			title: "yfchan.career@gmail.com",
+			href: "mailto:yfchan.career@gmail.com",
 			icon: <FaEnvelope />,
 		},
 		{
@@ -45,5 +47,5 @@ export async function getHeaderData(): Promise<HeaderItemProps[]> {
 			href: "https://linkedin.com/in/yatfuchan",
 			icon: <FaLinkedin />,
 		},
-	]
+	];
 }
