@@ -40,8 +40,8 @@ export const workData: WorkExperienceInfo[] = [
 						filtering to enhance data quality.
 					</M>,
 					<M>
-						Engineered a data processing system to efficiently process **over
-						500 hours** of audio and text data.
+						Engineered a **data processing system** to efficiently process
+						**over 500 hours** of audio and text data.
 					</M>,
 					<M>
 						Managed full-stack development of the company website and API,
@@ -64,8 +64,8 @@ export const workData: WorkExperienceInfo[] = [
 				toDate: new Date("2022-08"),
 				details: [
 					<M>
-						Enhanced Google search ranking of **10 keywords** to the **top 3
-						positions** through refined **SEO** strategies.
+						Enhanced **Google search ranking** of 10 keywords **to the top 3
+						positions** through refined SEO strategies.
 					</M>,
 					<M>
 						Increased email engagement rates by **17-22%** by introducing

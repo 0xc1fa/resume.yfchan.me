@@ -18,7 +18,7 @@ export const competitionData: CompetitionDataItem[] = [
 				AI features to enhance doctor-client interactions.
 			</M>,
 			<M>
-				**Led a team of 5 developers** to secure a top-3 position in the
+				**Led a team of 5 developers** to secure a **top-3** position in the
 				Productive Collaborative Work Award.
 			</M>,
 		],
@@ -34,7 +34,7 @@ export const competitionData: CompetitionDataItem[] = [
 				synthesis models to enhance user experiences.
 			</M>,
 			<M>
-				Recognized as one of the winners among 136 final year projects at HKU
+				Recognized as one of the **winners among 136** final year projects at HKU
 				CE/EEE.
 			</M>,
 		],

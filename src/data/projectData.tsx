@@ -18,12 +18,12 @@ export const projectData: GeneralInfo[] = [
 		),
 		details: [
 			<M>
-				Integrated AI technology to synthesize audio based on user
+				Integrated **AI technology** to synthesize audio based on user
 				specifications.
 			</M>,
 			<M>
-				Enabled real-time data visualization of user inputs with interactive
-				modification capabilities.
+				Enabled **real-time data visualization** of user inputs with
+				**interactive** modification capabilities.
 			</M>,
 			<M>
 				Incorporated 27 distinct mouse and gesture handling features, optimized
@@ -35,11 +35,11 @@ export const projectData: GeneralInfo[] = [
 		title: "Index2DB (Java): An Geospatial Database",
 		details: [
 			<M>
-				Engineered a high-performance indexing system for spatial data,
+				Engineered a high-performance **indexing system for spatial data**,
 				enhancing querying efficiency.
 			</M>,
 			<M>
-				Implemented an index-powered k-NN search algorithm for rapid NN
+				Implemented an **index-powered k-NN search algorithm** for rapid NN
 				retrieval using pruning and threshold techniques.
 			</M>,
 			<M>
@@ -52,12 +52,12 @@ export const projectData: GeneralInfo[] = [
 		title: "Lighthouse: Guiding Vehicle for the Visually Impaired",
 		details: [
 			<M>
-				Recognizes speech input and provides synthesized speech responses for
-				voice command interaction.
+				**Recognizes speech input** and provides synthesized speech responses
+				for **voice command interaction**.
 			</M>,
 			<M>
-				Utilized computer vision to recognize surroundings and offers real-time
-				feedback with collision avoidance.
+				Utilized **computer vision to recognize surroundings** and offers
+				real-time feedback with **collision avoidance**.
 			</M>,
 		],
 	},
@@ -74,10 +74,10 @@ export const projectData: GeneralInfo[] = [
 		),
 		details: [
 			<M>
-				Led a team of 5 backend developers to deliver real-time course schedules
-				and user-tailored information.
+				**Led a team of 5** backend developers to deliver real-time course
+				schedules and user-tailored information.
 			</M>,
-			<M>Integrated a facial recognition login system using Python.</M>,
+			<M>Integrated a **facial recognition login system** using OpenCV.</M>,
 		],
 	},
 ];
