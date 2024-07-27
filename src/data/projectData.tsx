@@ -5,90 +5,79 @@ import M from "markdown-to-jsx";
 /* eslint-disable react/jsx-key */
 /* eslint-disable react/no-unescaped-entities */
 export const projectData: GeneralInfo[] = [
-  {
-    title: "Wavy: A web-based Music Workstation (Individual)",
-    subtitle: (
-      <a
-        href="http://youtu.be/uQ2K_xgbq7g"
-        target="_blank"
-        className="mobile-hide"
-      >
-        Demo Video
-      </a>
-    ),
-    details: [
-      <M>
-        Enhanced UX with a **resizable** and **scrollable** canvas featuring
-        history, import/export, and clipboard functionalities.
-      </M>,
-      <M>
-        Integrated backend voice synthesizer enabling the **generation of vocal
-        tracks**.
-      </M>,
-      <M>
-        Provided an isolated library for **custom utilization** and **style
-        modification**. | Demo video:
-        [http://youtu.be/uQ2K_xgbq7g](http://youtu.be/uQ2K_xgbq7g)
-      </M>,
-    ],
-  },
-  {
-    title: "ICMS: Course Management Dashboard (Group)",
-    subtitle: (
-      <a
-        href="https://www.youtube.com/watch?v=4uMUNsvreuI"
-        target="_blank"
-        className="mobile-hide"
-      >
-        Demo Video
-      </a>
-    ),
-    details: [
-      <M>
-        **Led a 5-people backend development team** and was fully responsible
-        for the **frontend** and **database** of the application.
-      </M>,
-      <M>
-        Provides **real-time course schedules** and information based on the
-        user's context and timing.
-      </M>,
-      <M>
-        Integrated a **facial recognition** component for login using
-        **Python**.
-      </M>,
-    ],
-  },
-
-  {
-    title:
-      "2-player Game: Game Utilizing Socket and Multi-threading (Individual)",
-    details: [
-      <M>
-        Integrated **socket programming**, **multi-threading** to manage game
-        state and user interactions.
-      </M>,
-      <M>
-        Implemented a dynamic **Java Swing** GUI for real-time game status
-        updates and player interactions.
-      </M>,
-      <M>
-        Improved game stability by handling **network disruptions** and **player
-        disconnections** effectively.
-      </M>,
-    ],
-  },
-
-  {
-    title: "Folded: A interactive GUI card game (Individual)",
-    details: [
-      <M>
-        Developed a **Java-based** card game using Swing, managing shuffling,
-        betting, and rule enforcement.
-      </M>,
-      <M>
-        Created interactive GUI elements for card replacement and result
-        evaluation.
-      </M>,
-    ],
-  },
+	{
+		title: "Wavy: A Web-based Music Workstation (Individual)",
+		subtitle: (
+			<a
+				href="http://youtu.be/uQ2K_xgbq7g"
+				target="_blank"
+				className="mobile-hide"
+			>
+				Demo Video
+			</a>
+		),
+		details: [
+			<M>
+				Integrated AI technology to synthesize audio based on user
+				specifications.
+			</M>,
+			<M>
+				Enabled real-time data visualization of user inputs with interactive
+				modification capabilities.
+			</M>,
+			<M>
+				Incorporated 27 distinct mouse and gesture handling features, optimized
+				for both mobile and desktop platforms.
+			</M>,
+		],
+	},
+	{
+		title: "Index2DB (Java): An Geospatial Database",
+		details: [
+			<M>
+				Engineered a high-performance indexing system for spatial data,
+				enhancing querying efficiency.
+			</M>,
+			<M>
+				Implemented an index-powered k-NN search algorithm for rapid NN
+				retrieval using pruning and threshold techniques.
+			</M>,
+			<M>
+				Designed a disk-based data structure for efficient searches of large
+				datasets.
+			</M>,
+		],
+	},
+	{
+		title: "Lighthouse: Guiding Vehicle for the Visually Impaired",
+		details: [
+			<M>
+				Recognizes speech input and provides synthesized speech responses for
+				voice command interaction.
+			</M>,
+			<M>
+				Utilized computer vision to recognize surroundings and offers real-time
+				feedback with collision avoidance.
+			</M>,
+		],
+	},
+	{
+		title: "ICMS: Interactive Course Management System",
+		subtitle: (
+			<a
+				href="https://www.youtube.com/watch?v=4uMUNsvreuI"
+				target="_blank"
+				className="mobile-hide"
+			>
+				Demo Video
+			</a>
+		),
+		details: [
+			<M>
+				Led a team of 5 backend developers to deliver real-time course schedules
+				and user-tailored information.
+			</M>,
+			<M>Integrated a facial recognition login system using Python.</M>,
+		],
+	},
 ];

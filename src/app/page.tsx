@@ -11,21 +11,21 @@ import { getCommitHash } from "@/utils/getCommitHash";
 import { Suspense } from "react";
 
 export default async function Home() {
-  const thisHash = await getCommitHash();
+	const thisHash = await getCommitHash();
 
-  return (
-    <>
-      <Hotkeys />
-      <Suspense>
-        <Toast thisHash={thisHash} />
-      </Suspense>
-      <Header />
-      <EducationSection />
-      <CertSection />
-      <CompetitionSection />
-      <WorkSection />
-      <ProjectSection />
-      <SkillsSection />
-    </>
-  );
+	return (
+		<>
+			<Hotkeys />
+			<Suspense>
+				<Toast thisHash={thisHash} />
+			</Suspense>
+			<Header />
+			<EducationSection />
+			<CompetitionSection />
+			<WorkSection />
+			<CertSection />
+			<ProjectSection />
+			<SkillsSection />
+		</>
+	);
 }
