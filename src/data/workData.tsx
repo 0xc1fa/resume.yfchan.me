@@ -5,6 +5,30 @@ import M from "markdown-to-jsx";
 /* eslint-disable react/no-unescaped-entities */
 export const workData: WorkExperienceInfo[] = [
 	{
+		company: "Hospital Authority",
+		posts: [
+			{
+				title: "Contract Junior Programmer - Full-time",
+				fromDate: new Date("2024-08"),
+				toDate: "now",
+				details: [
+					<M>
+						Integrated and managed **Kafka** messaging systems within **Spring
+						Boot** applications.
+					</M>,
+					<M>
+						Implemented load testing with **k6** and unit testing with **JUnit**
+						to ensure application performance and reliability.
+					</M>,
+					<M>
+						Managed CI/CD pipeline using **GitHub Actions** to deploy
+						applications to **OpenShift** via **Kubernetes**.
+					</M>,
+				],
+			},
+		],
+	},
+	{
 		company: "NovBee",
 		posts: [
 			{

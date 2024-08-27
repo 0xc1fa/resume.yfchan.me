@@ -1,47 +1,57 @@
 export type ContactInfo = {
-  name: string;
-  phoneNumber?: string;
-  emailAddress?: string;
-  githubUsername?: string;
-  linkedinIdentifier?: string;
-  portfolioUrl?: string;
+	name: string;
+	phoneNumber?: string;
+	emailAddress?: string;
+	githubUsername?: string;
+	linkedinIdentifier?: string;
+	portfolioUrl?: string;
 };
 
 export type EducationInfo = {
-  institute: string;
-  degreeName: string;
-  fromDate: Date;
-  toDate: Date;
-  details?: (React.ReactNode | string)[];
+	institute: string;
+	degreeName: string;
+	fromDate: Date;
+	toDate: Date;
+	details?: (React.ReactNode | string)[];
 };
 
 export type CertificationInfo = {
-  title: string;
-  issuedBy: string;
-  obtainedDate: Date;
-  expiresDate: Date;
-  details?: (React.ReactNode | string)[];
+	title: string;
+	issuedBy: string;
+	obtainedDate: Date;
+	expiresDate: Date;
+	details?: (React.ReactNode | string)[];
 };
 
 export type GeneralInfo = {
-  title: React.ReactNode | string;
-  subtitle?: React.ReactNode | string;
-  details?: (React.ReactNode | string)[];
+	title: React.ReactNode | string;
+	subtitle?: React.ReactNode | string;
+	details?: (React.ReactNode | string)[];
 };
 
 export type WorkExperienceInfo = {
-  company: string;
-  posts?: Array<{
-    title: string;
-    fromDate: Date;
-    toDate: Date;
-    details?: (React.ReactNode | string)[];
-  }>;
+	company: string;
+	posts?: Array<{
+		title: string;
+		fromDate: Date;
+		toDate: Date | "now";
+		details?: (React.ReactNode | string)[];
+	}>;
+};
+
+export type WorkExperienceInfoWithoutNow = {
+	company: string;
+	posts?: Array<{
+		title: string;
+		fromDate: Date;
+		toDate: Date;
+		details?: (React.ReactNode | string)[];
+	}>;
 };
 
 export type PostInfo = {};
 
 export type SkillsInfo = {
-  category: string;
-  items: string[];
+	category: string;
+	items: string[];
 };
